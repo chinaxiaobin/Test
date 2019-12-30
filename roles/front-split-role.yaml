@@ -1,0 +1,9 @@
+---
+- hosts: staging011
+  remote_user: www
+  become: yes
+  become_method: su
+  become_user: root
+  serial: 2
+  roles:
+  - front-split
