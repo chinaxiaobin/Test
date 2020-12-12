@@ -1,6 +1,7 @@
 @Library('jenkins-share-lib')
 def tools = new org.devops.tools()
 
+hello()
 pipeline {
     agent {
         label "master"
