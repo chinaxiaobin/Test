@@ -35,7 +35,7 @@ pipeline {
                 timeout(time: 30, unit: "MINUTES") {
                     script {
                         println("代码扫描")
-                        tools.printMes("this is mylib")
+                        tools.PrintMes("this is mylib")
                     }
                 }
             }
@@ -49,17 +49,17 @@ pipeline {
         }
         success {
             script {
-                currentBuild.description += "\n 构建成功"  //在构建完成后打印描述信息
+                currentBuild.description = "\n 构建成功"  //在构建完成后打印描述信息
             }
         }
         failure {
             script {
-                currentBuild.description += "\n 构建失败"
+                currentBuild.description = "\n 构建失败"
             }
         }
         aborted {
             script {
-                currentBuild.description += "\n 构建取消"
+                currentBuild.description = "\n 构建取消"
             }
         }
     }
