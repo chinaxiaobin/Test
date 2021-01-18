@@ -57,7 +57,7 @@ pipeline {
         }
         failure {
             script {
-                currentBuild.description = "\n 构建失败"
+                currentBuild.description = "构建失败"
             }
         }
         aborted {
