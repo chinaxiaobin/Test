@@ -52,7 +52,7 @@ pipeline {
         }
         success {
             script {
-                currentBuild.description = "\n 构建成功"  //在构建完成后打印描述信息
+                currentBuild.description = "构建成功"  //在构建完成后打印描述信息
             }
         }
         failure {
